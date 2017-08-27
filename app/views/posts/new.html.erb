@@ -1,6 +1,13 @@
 <h1>New posts page</h1>
 
 <%= form_for :post, url: posts_path do |form| %>
+<% if @post.errors %>
+  <% @post.errors.full_messages.each do |error| %>
+    <ul>
+      <li><%= error %></li>
+    </ul>
+  <% end %>
+<% end %>
   <div class="inputs">
     <p>
       <%= form.label :title  %>

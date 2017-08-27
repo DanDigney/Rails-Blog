@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <nav class="header">
+    <ul>
+    <button class="button"><%= link_to "Home", root_path %></button>
+    <button class="button"><%= link_to "Sign in" %></button>
+    <button class="button"><%= link_to "Log Out" %></button>
+    <button class="button"><%= link_to "Create A Post", new_post_path %></button>
+  </nav>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
