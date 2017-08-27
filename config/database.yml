@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: blog_production
-  username: # Set this/these when you deploy
-  password: # Maybe set this too? I don't know, not a whole lot of insight on this. Default: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
+  username: "fuck heroku"
+  password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
