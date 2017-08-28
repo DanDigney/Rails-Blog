@@ -9,7 +9,6 @@
 <body>
   <nav class="header">
     <ul>
-    <button class="button"><%= link_to "Home", root_path %></button>
     <% if logged_in? %>
       <button class="button"><%= link_to "Log Out" %></button>
       <button class="button"><%= link_to "Create A Post", new_post_path %></button>
@@ -17,6 +16,7 @@
       <button class="button"><%= link_to "Sign in", new_session_path %></button>
       <button class="button"><%= link_to "Create Account", new_user_path %></button>
     <% end %>
+    <button class="button"><%= link_to "Home", root_path %></button>
   </nav>
 
   <%= yield %>
